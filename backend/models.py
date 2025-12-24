@@ -58,6 +58,7 @@ class Sale(BaseModel):
     sale_items = db.relationship("SaleItem", back_populates = "sale")
     
     
+    
 class SaleItem(BaseModel):
     quantity = db.Column(db.Numeric(10, 2))
     price_at_sale = db.Column(db.Numeric(10, 2), nullable = False)
